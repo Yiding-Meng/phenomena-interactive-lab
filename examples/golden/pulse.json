@@ -1,0 +1,65 @@
+{
+  "id": "pulse",
+  "concept_title": "色散脉冲整形",
+  "pedagogical_goal": "观察群延迟色散与三阶色散如何把频率分量的到达时间重排，从而改变脉冲宽度与对称性。",
+  "mathematical_model": {
+    "governing_equations_latex": [
+      "E_{out}(t)=\\mathcal{F}^{-1}\\left\\{\\tilde E_0(\\omega)e^{i(\\frac{1}{2}\\beta_2\\omega^2+\\frac{1}{6}\\beta_3\\omega^3)}\\right\\}",
+      "I(t)=\\left|E_{out}(t)\\right|^2"
+    ],
+    "numerical_algorithm": "在频域叠加色散相位后回到时域，计算包络强度与 FWHM。",
+    "pre_injected_helpers_needed": ["fft", "ifft", "linspace", "finiteStats"]
+  },
+  "interactive_controls": [
+    {
+      "id": "gdd",
+      "label": "群延迟色散 GDD",
+      "symbol": "phi2",
+      "unit": "fs^2",
+      "min": -600,
+      "max": 600,
+      "step": 10,
+      "default": 0,
+      "physical_effect": "增大 |GDD| 会重排频率到达时间，使脉冲展宽。"
+    },
+    {
+      "id": "tod",
+      "label": "三阶色散 TOD",
+      "symbol": "phi3",
+      "unit": "fs^3",
+      "min": -1800,
+      "max": 1800,
+      "step": 25,
+      "default": 0,
+      "physical_effect": "三阶相位打破时域对称性，产生拖尾与振荡。"
+    }
+  ],
+  "aha_presets": [
+    {
+      "id": "transform-limited",
+      "name": "变换极限",
+      "description": "所有色散项归零，脉冲保持最短时间宽度。",
+      "param_values": { "gdd": 0, "tod": 0 }
+    },
+    {
+      "id": "gdd-stretch",
+      "name": "二阶展宽",
+      "description": "只打开 GDD，观察脉冲展宽。",
+      "param_values": { "gdd": 360, "tod": 0 }
+    }
+  ],
+  "visual_views": [
+    {
+      "view_id": "main_canvas",
+      "type": "Dual_Plot",
+      "x_axis": "时间与角频率",
+      "y_axis": "归一化强度与相位",
+      "layers": ["初始参考基线", "当前时域强度", "频域振幅与相位"]
+    }
+  ],
+  "kernel_notes": {
+    "numeric_kernel": "fft-phase-ifft",
+    "reuse_reason": "适合任何频谱相位、波包或线性响应问题。",
+    "limits": "真实物理内核，不是通用表达式编译器。"
+  }
+}

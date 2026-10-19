@@ -1,0 +1,58 @@
+{
+  "id": "oscillator",
+  "concept_title": "阻尼谐振子",
+  "pedagogical_goal": "通过真实二阶动力学与幅频响应，理解阻尼如何压低共振峰。",
+  "mathematical_model": {
+    "governing_equations_latex": [
+      "\\ddot{x}+2\\gamma\\omega_0\\dot{x}+\\omega_0^2x=A\\cos(\\omega_d t)"
+    ],
+    "numerical_algorithm": "RK4 积分二阶状态方程，并扫描驱动频率计算稳态振幅。",
+    "pre_injected_helpers_needed": ["rk4", "linspace", "finiteStats"]
+  },
+  "interactive_controls": [
+    {
+      "id": "omega0",
+      "label": "自然角频率",
+      "symbol": "omega0",
+      "unit": "rad/s",
+      "min": 0.5,
+      "max": 2.4,
+      "step": 0.02,
+      "default": 1.15,
+      "physical_effect": "改变固有节拍与共振位置。"
+    },
+    {
+      "id": "damping",
+      "label": "阻尼比",
+      "symbol": "gamma",
+      "unit": "",
+      "min": 0.02,
+      "max": 1.2,
+      "step": 0.01,
+      "default": 0.18,
+      "physical_effect": "增大阻尼会降低并展宽共振峰。"
+    }
+  ],
+  "aha_presets": [
+    {
+      "id": "resonance",
+      "name": "共振窗口",
+      "description": "驱动频率贴近自然频率，Q 因子放大响应。",
+      "param_values": { "omega0": 1.4, "damping": 0.16 }
+    }
+  ],
+  "visual_views": [
+    {
+      "view_id": "main_canvas",
+      "type": "Dual_Plot",
+      "x_axis": "时间与驱动频率",
+      "y_axis": "位移与稳态振幅",
+      "layers": ["小角度参考", "时域轨迹", "幅频响应与工作点"]
+    }
+  ],
+  "kernel_notes": {
+    "numeric_kernel": "rk4-forced-oscillator",
+    "reuse_reason": "适合弹簧、RLC、机械振动与共振类问题。",
+    "limits": "模型参数仍应映射到可解释的物理量。"
+  }
+}

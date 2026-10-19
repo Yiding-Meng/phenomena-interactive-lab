@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Phenomena 把抽象概念解构为真实计算、可交互、可自动质检的科学仪器。"
+    />
+    <meta name="theme-color" content="#08110f" />
+    <title>Phenomena — 万物皆可视觉化交互</title>
+    <link rel="stylesheet" href="./vendor/katex/katex.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient" data-ambient aria-hidden="true">
+      <div class="ambient__orb ambient__orb--one"></div>
+      <div class="ambient__orb ambient__orb--two"></div>
+      <div class="ambient__grid"></div>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Phenomena 首页">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 34 34" fill="none">
+              <path d="M4 17h7l3-8 5.5 17 4-12 2 3H30" />
+              <circle cx="17" cy="17" r="14.2" />
+            </svg>
+          </span>
+          <span class="brand__copy">
+            <span class="brand__name">PHENOMENA</span>
+            <span class="brand__sub">INTERACTIVE LAB</span>
+          </span>
+        </a>
+
+        <div class="topbar__center">
+          <span class="live-indicator">
+            <span class="live-indicator__dot"></span>
+            <span data-live-status>LIVE</span>
+          </span>
+          <span class="topbar__slash">/</span>
+          <span>概念 → 可交互仪器</span>
+          <span class="topbar__slash">/</span>
+          <span class="topbar__mono">LOCAL CORE 01</span>
+        </div>
+
+        <div class="topbar__actions">
+          <button
+            class="icon-button"
+            data-audit
+            type="button"
+            aria-expanded="false"
+            aria-controls="audit-panel"
+          >
+            <span class="icon-button__pulse"></span>
+            <span>自动质检</span>
+            <span class="key-hint">⌘ K</span>
+          </button>
+          <button class="primary-button" data-export type="button">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 10.5v2h10v-2M8 2v8m0 0L4.8 6.8M8 10l3.2-3.2" />
+            </svg>
+            导出单文件
+          </button>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <div class="sidebar__intro">
+          <span class="eyebrow">CONCEPT INDEX</span>
+          <p>四个不是演示动画，而是可被压力测试的科学模型。</p>
+        </div>
+        <nav class="domain-list" data-domain-list aria-label="概念模型"></nav>
+        <div class="sidebar__footer">
+          <div class="sidebar__seal">
+            <svg viewBox="0 0 52 52" fill="none" aria-hidden="true">
+              <circle cx="26" cy="26" r="23" />
+              <path d="M26 7v38M7 26h38M12.6 12.6l26.8 26.8M39.4 12.6 12.6 39.4" />
+              <circle cx="26" cy="26" r="5" />
+            </svg>
+            <div>
+              <span>SIMATH CORE</span>
+              <small>FFT · RK4 · MATRIX</small>
+            </div>
+          </div>
+          <span class="sidebar__version">BUILD / 0.2.0 — LOCAL</span>
+        </div>
+      </aside>
+
+      <main class="main">
+        <form class="concept-command" data-concept-form>
+          <span class="concept-command__label">
+            <span class="concept-command__signal"></span>
+            CONCEPT → INSTRUMENT
+          </span>
+          <label class="concept-command__field">
+            <span class="sr-only">输入要可视化的概念</span>
+            <input
+              data-concept-input
+              type="text"
+              autocomplete="off"
+              placeholder="输入任意概念，例如：超短脉冲色散、阻尼共振、卷积核感受野…"
+            />
+            <span class="concept-command__enter" aria-hidden="true">ENT</span>
+          </label>
+          <button class="concept-command__submit" type="submit">
+            生成交互
+            <span aria-hidden="true">GO</span>
+          </button>
+          <p class="concept-command__hint" data-concept-hint>
+            本地语义路由优先 · 未知概念可由 Planner 生成白名单数值蓝图
+          </p>
+          <div class="concept-command__status" data-generation-status>
+            <span class="concept-command__status-dot"></span>
+            <span data-generation-status-text>检查动态生成引擎…</span>
+          </div>
+        </form>
+
+        <section class="concept-hero">
+          <div class="concept-hero__index" data-domain-index>01</div>
+          <div class="concept-hero__main">
+            <span class="eyebrow" data-domain-eyebrow>PULSE / DISPERSION</span>
+            <h1 data-domain-title>色散脉冲整形</h1>
+            <p class="concept-hero__subtitle" data-domain-subtitle>
+              看见频率如何重排时间
+            </p>
+            <p class="concept-hero__question" data-question></p>
+            <div class="goal-line">
+              <span class="goal-line__marker">AHA-GOAL</span>
+              <p data-goal></p>
+            </div>
+          </div>
+          <div class="equation-card">
+            <div class="equation-card__header">
+              <span>GOVERNING EQUATION</span>
+              <span>LIVE / REAL COMPUTATION</span>
+            </div>
+            <div class="equation-card__body">
+              <div class="equation-card__formula" data-formula></div>
+              <div class="equation-card__secondary" data-formula-secondary></div>
+            </div>
+            <div class="equation-card__footer">
+              <span class="equation-card__rule"></span>
+              <p data-algorithm></p>
+            </div>
+            <div class="helper-row" data-helpers></div>
+          </div>
+        </section>
+
+        <section class="instrument-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">INTERACTIVE INSTRUMENT</span>
+              <h2>把直觉握在手里</h2>
+            </div>
+            <div class="section-heading__actions">
+              <button class="text-button" data-play type="button">
+                <span class="play-glyph" aria-hidden="true"></span>
+                <span data-play-label>自动扫参</span>
+              </button>
+              <button class="text-button" data-reset type="button">
+                <span class="reset-glyph" aria-hidden="true">R</span>
+                回到默认
+              </button>
+            </div>
+          </div>
+
+          <div class="instrument-grid">
+            <div class="observatory">
+              <article class="plot-card">
+                <header class="plot-card__header">
+                  <div class="plot-card__title">
+                    <span class="plot-card__crosshair" aria-hidden="true"></span>
+                    <div>
+                      <span class="panel-kicker" data-primary-view-label>2D PLOT</span>
+                      <h3 data-plot-title>时域包络</h3>
+                    </div>
+                  </div>
+                  <div class="plot-card__meta">
+                    <span class="plot-card__mode" data-plot-mode>2D PLOT</span>
+                    <span class="state-pill" data-active-state>变换极限</span>
+                    <div class="legend" data-primary-legend></div>
+                  </div>
+                </header>
+                <div class="canvas-stage canvas-stage--primary">
+                  <canvas data-primary-canvas aria-label="主响应可视化画布"></canvas>
+                  <span class="canvas-corner canvas-corner--tl"></span>
+                  <span class="canvas-corner canvas-corner--tr"></span>
+                  <span class="canvas-corner canvas-corner--bl"></span>
+                  <span class="canvas-corner canvas-corner--br"></span>
+                </div>
+                <div class="metric-strip" data-metric-strip></div>
+              </article>
+
+              <article class="plot-card plot-card--secondary" data-secondary-panel>
+                <header class="plot-card__header plot-card__header--compact">
+                  <div class="plot-card__title">
+                    <span class="plot-card__crosshair plot-card__crosshair--quiet" aria-hidden="true"></span>
+                    <div>
+                      <span class="panel-kicker">LINKED VIEW</span>
+                      <h3 data-secondary-label>频域相位</h3>
+                    </div>
+                  </div>
+                  <div class="legend" data-secondary-legend></div>
+                </header>
+                <div class="canvas-stage canvas-stage--secondary">
+                  <canvas data-secondary-canvas aria-label="联动视图画布"></canvas>
+                  <canvas class="hidden-canvas" data-phase-canvas aria-hidden="true"></canvas>
+                </div>
+              </article>
+            </div>
+
+            <aside class="control-card">
+              <header class="control-card__header">
+                <div>
+                  <span class="eyebrow">CONTROL SURFACE</span>
+                  <h3>物理参数</h3>
+                </div>
+                <span class="control-card__status">
+                  <span></span>
+                  SAFE RANGE
+                </span>
+              </header>
+              <div class="controls" data-controls></div>
+
+              <div class="presets-header">
+                <div>
+                  <span class="eyebrow">AHA-MOMENT</span>
+                  <h3>顿悟预设</h3>
+                </div>
+                <span class="presets-header__count">一键定位</span>
+              </div>
+              <div class="presets" data-presets></div>
+
+              <div class="insight-card">
+                <span class="insight-card__badge" data-intuition-badge>REFERENCE</span>
+                <p data-insight></p>
+                <span class="insight-card__rule"></span>
+                <small>拖动参数，观察曲线如何偏离参考基线。</small>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="proof-section">
+          <article class="telemetry-card">
+            <header>
+              <div>
+                <span class="eyebrow">RUNTIME TRACE</span>
+                <h3>计算证据流</h3>
+              </div>
+              <span class="telemetry-card__tag">NO FAKE ANIMATION</span>
+            </header>
+            <div class="console-stream" data-console-stream></div>
+            <footer>
+              <span>window.__SIM_CONTROLLER__</span>
+              <span>Finite-value probe · linked</span>
+            </footer>
+          </article>
+
+          <article class="pipeline-card">
+            <header>
+              <div>
+                <span class="eyebrow">QUALITY LOOP</span>
+                <h3>从概念到可信交互</h3>
+              </div>
+              <button class="pipeline-card__run" data-audit type="button">
+                运行闭环 <span aria-hidden="true">RUN</span>
+              </button>
+            </header>
+            <div class="pipeline">
+              <div class="pipeline__line" aria-hidden="true"></div>
+              <div class="pipeline__node">
+                <span class="pipeline__index">01 / PLANNER</span>
+                <span class="pipeline__icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 18V6m0 12h16M7 14l3-5 3 3 4-7" />
+                  </svg>
+                </span>
+                <strong>策展</strong>
+                <small>方程与语义</small>
+              </div>
+              <div class="pipeline__node">
+                <span class="pipeline__index">02 / CODER</span>
+                <span class="pipeline__icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="m8 6-5 6 5 6M16 6l5 6-5 6M14 4l-4 16" />
+                  </svg>
+                </span>
+                <strong>计算</strong>
+                <small>SimMath 内核</small>
+              </div>
+              <div class="pipeline__node">
+                <span class="pipeline__index">03 / PROBE</span>
+                <span class="pipeline__icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M3 12h4l2 5 4-11 2.5 8 2-2H21" />
+                  </svg>
+                </span>
+                <strong>探针</strong>
+                <small>边界与 NaN</small>
+              </div>
+              <div class="pipeline__node">
+                <span class="pipeline__index">04 / VLM-QA</span>
+                <span class="pipeline__icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="4" width="18" height="15" rx="2" />
+                    <path d="m7 15 3-4 3 2 4-5" />
+                  </svg>
+                </span>
+                <strong>视觉回归</strong>
+                <small>像素差分</small>
+              </div>
+            </div>
+            <div class="pipeline-card__footer">
+              <span class="pipeline-status-dot"></span>
+              <span>当前模型全控制通道 · 双边界与逐控制端点 · 0 外部 Token</span>
+            </div>
+          </article>
+        </section>
+
+        <footer class="page-footer">
+          <div>
+            <span class="brand__name">PHENOMENA</span>
+            <p>抽象不该只是被解释，它应该能被拨动。</p>
+          </div>
+          <div class="page-footer__meta">
+            <span>REAL MATH</span>
+            <span>STABLE BOUNDS</span>
+            <span>VISUAL PROOF</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <aside
+      class="audit-panel"
+      id="audit-panel"
+      data-audit-panel
+      aria-hidden="true"
+      aria-label="自动质检面板"
+    >
+      <header class="audit-panel__header">
+        <div>
+          <span class="eyebrow">MULTIMODAL QA</span>
+          <h2>视觉回归质检</h2>
+        </div>
+        <button class="round-button" data-audit-close type="button" aria-label="关闭质检面板">
+          ×
+        </button>
+      </header>
+      <div class="audit-panel__statusbar">
+        <span class="audit-status is-running" data-audit-status>RUNNING</span>
+        <p data-audit-summary>正在枚举边界与采集证据…</p>
+      </div>
+      <div class="audit-panel__method">
+        <div class="method-step">
+          <span>01</span>
+          <p>拖动全部滑块至最小、最大与预设状态</p>
+        </div>
+        <div class="method-step">
+          <span>02</span>
+          <p>读取 Canvas 像素并比较 MSE</p>
+        </div>
+        <div class="method-step">
+          <span>03</span>
+          <p>检查全局双边界与逐控制端点，查找 NaN / Infinity</p>
+        </div>
+      </div>
+      <div class="audit-panel__results" data-audit-results></div>
+      <footer class="audit-panel__footer">
+        <span>PIXEL-DIFF GATE</span>
+        <span>ZERO TOKEN COST</span>
+      </footer>
+    </aside>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+    <dialog class="export-dialog" data-export-dialog>
+      <header class="export-dialog__header">
+        <div>
+          <span class="eyebrow">SELF-CONTAINED INSTRUMENT</span>
+          <h2>导出为单文件 HTML</h2>
+          <p>包含数值内核、图表渲染器与当前参数，离线也能运行。</p>
+        </div>
+        <button class="round-button" data-export-close type="button" aria-label="关闭导出窗口">
+          ×
+        </button>
+      </header>
+      <pre class="export-code" data-export-code></pre>
+      <footer class="export-dialog__footer">
+        <button class="secondary-button" data-export-copy type="button">复制源码</button>
+        <button class="primary-button" data-export-confirm type="button">
+          下载 .html
+          <span aria-hidden="true">HTML</span>
+        </button>
+      </footer>
+    </dialog>
+
+    <div class="hidden" data-intuition-text></div>
+
+    <script src="./vendor/katex/katex.min.js"></script>
+    <script src="./src/simmath.js"></script>
+    <script src="./src/routing.js"></script>
+    <script src="./src/domains.js"></script>
+    <script src="./src/blueprint-compiler.js"></script>
+    <script src="./src/chart-renderer.js"></script>
+    <script src="./src/standalone-builder.js"></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>

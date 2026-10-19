@@ -1,0 +1,17 @@
+{
+  "name": "phenomena-concept-instrument",
+  "version": "0.2.0",
+  "private": true,
+  "description": "A local-first concept-to-interactive scientific instrument studio.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "test:browser": "node scripts/run-audit.mjs",
+    "export:demo": "node scripts/export-demo.mjs",
+    "package:clean": "node scripts/package-check.mjs",
+    "postinstall": "node scripts/install-vendor.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.55.1"
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "checks": [
+    {
+      "name": "输入图 hover 生成 grid 探针",
+      "ok": true,
+      "panel": "grid",
+      "outputRow": 23,
+      "outputColumn": 20,
+      "inputRow": 23,
+      "inputColumn": 20,
+      "inputValue": 0.5934402715950999,
+      "outputValue": 0.84416921973667,
+      "preActivation": 0.615755840299481,
+      "relu": 0.8004825923893254,
+      "finite": true
+    },
+    {
+      "name": "输入图探针数值有限",
+      "ok": true,
+      "panel": "grid",
+      "outputRow": 23,
+      "outputColumn": 20,
+      "inputRow": 23,
+      "inputColumn": 20,
+      "inputValue": 0.5934402715950999,
+      "outputValue": 0.84416921973667,
+      "preActivation": 0.615755840299481,
+      "relu": 0.8004825923893254,
+      "finite": true
+    },
+    {
+      "name": "激活图 hover 生成 grid 探针",
+      "ok": true,
+      "panel": "grid",
+      "outputRow": 33,
+      "outputColumn": 14,
+      "inputRow": 33,
+      "inputColumn": 14,
+      "inputValue": 0.5529088947532724,
+      "outputValue": 0.728141681469807,
+      "preActivation": 0.5311227683359251,
+      "relu": 0.6904595988367026,
+      "finite": true
+    },
+    {
+      "name": "探针输出值等于真实 activation 数组值",
+      "ok": true,
+      "panel": "grid",
+      "outputRow": 33,
+      "outputColumn": 14,
+      "inputRow": 33,
+      "inputColumn": 14,
+      "inputValue": 0.5529088947532724,
+      "outputValue": 0.728141681469807,
+      "preActivation": 0.5311227683359251,
+      "relu": 0.6904595988367026,
+      "finite": true
+    },
+    {
+      "name": "卷积核 hover 生成 kernel 探针",
+      "ok": true,
+      "panel": "kernel",
+      "finite": true
+    },
+    {
+      "name": "hover 触发画布重绘（像素差分 > 0）",
+      "ok": true,
+      "pixelDiff": 0.004750300790342086
+    },
+    {
+      "name": "pendulum/small-angle 相空间轨迹有箭头与起终点",
+      "ok": true,
+      "points": 4502,
+      "arrows": 7,
+      "start": {
+        "x": 0.16,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.05737901511519552,
+        "y": -0.34528634346430387,
+        "index": 4501,
+        "time": 18
+      },
+      "finite": true,
+      "xDomain": [
+        -0.1728,
+        0.1728
+      ],
+      "yDomain": [
+        -0.49136507517341943,
+        0.49136507517341943
+      ]
+    },
+    {
+      "name": "pendulum/small-angle 相空间坐标轴未坍缩",
+      "ok": true,
+      "points": 4502,
+      "arrows": 7,
+      "start": {
+        "x": 0.16,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.05737901511519552,
+        "y": -0.34528634346430387,
+        "index": 4501,
+        "time": 18
+      },
+      "finite": true,
+      "xDomain": [
+        -0.1728,
+        0.1728
+      ],
+      "yDomain": [
+        -0.49136507517341943,
+        0.49136507517341943
+      ]
+    },
+    {
+      "name": "pendulum/large-angle 相空间轨迹有箭头与起终点",
+      "ok": true,
+      "points": 4502,
+      "arrows": 7,
+      "start": {
+        "x": 2.2,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 1.9361019396940564,
+        "y": -0.40599890802993854,
+        "index": 4501,
+        "time": 18
+      },
+      "finite": true,
+      "xDomain": [
+        -2.3760000000000003,
+        2.3760000000000003
+      ],
+      "yDomain": [
+        -6.774807347706739,
+        6.774807347706739
+      ]
+    },
+    {
+      "name": "pendulum/large-angle 相空间坐标轴未坍缩",
+      "ok": true,
+      "points": 4502,
+      "arrows": 7,
+      "start": {
+        "x": 2.2,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 1.9361019396940564,
+        "y": -0.40599890802993854,
+        "index": 4501,
+        "time": 18
+      },
+      "finite": true,
+      "xDomain": [
+        -2.3760000000000003,
+        2.3760000000000003
+      ],
+      "yDomain": [
+        -6.774807347706739,
+        6.774807347706739
+      ]
+    },
+    {
+      "name": "pendulum/kicked 相空间轨迹有箭头与起终点",
+      "ok": true,
+      "points": 4502,
+      "arrows": 7,
+      "start": {
+        "x": 0.4,
+        "y": 1.35,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": -0.046986261589258234,
+        "y": 1.6900664522433635,
+        "index": 4501,
+        "time": 18
+      },
+      "finite": true,
+      "xDomain": [
+        -0.6054545394509163,
+        0.6054545394509163
+      ],
+      "yDomain": [
+        -2.085442049991604,
+        2.085442049991604
+      ]
+    },
+    {
+      "name": "pendulum/kicked 相空间坐标轴未坍缩",
+      "ok": true,
+      "points": 4502,
+      "arrows": 7,
+      "start": {
+        "x": 0.4,
+        "y": 1.35,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": -0.046986261589258234,
+        "y": 1.6900664522433635,
+        "index": 4501,
+        "time": 18
+      },
+      "finite": true,
+      "xDomain": [
+        -0.6054545394509163,
+        0.6054545394509163
+      ],
+      "yDomain": [
+        -2.085442049991604,
+        2.085442049991604
+      ]
+    },
+    {
+      "name": "oscillator/free 相空间轨迹有箭头与起终点",
+      "ok": true,
+      "points": 5335,
+      "arrows": 7,
+      "start": {
+        "x": 1,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.06455052099916533,
+        "y": -0.02255887147466579,
+        "index": 5334,
+        "time": 32
+      },
+      "finite": true,
+      "xDomain": [
+        -1.08,
+        1.08
+      ],
+      "yDomain": [
+        -0.8949856900104854,
+        0.8949856900104854
+      ]
+    },
+    {
+      "name": "oscillator/free 相空间坐标轴未坍缩",
+      "ok": true,
+      "points": 5335,
+      "arrows": 7,
+      "start": {
+        "x": 1,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.06455052099916533,
+        "y": -0.02255887147466579,
+        "index": 5334,
+        "time": 32
+      },
+      "finite": true,
+      "xDomain": [
+        -1.08,
+        1.08
+      ],
+      "yDomain": [
+        -0.8949856900104854,
+        0.8949856900104854
+      ]
+    },
+    {
+      "name": "oscillator/resonance 相空间轨迹有箭头与起终点",
+      "ok": true,
+      "points": 5335,
+      "arrows": 7,
+      "start": {
+        "x": 1,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.7217960237805567,
+        "y": 0.9452119415228601,
+        "index": 5334,
+        "time": 32
+      },
+      "finite": true,
+      "xDomain": [
+        -1.08,
+        1.08
+      ],
+      "yDomain": [
+        -1.4941428571175932,
+        1.4941428571175932
+      ]
+    },
+    {
+      "name": "oscillator/resonance 相空间坐标轴未坍缩",
+      "ok": true,
+      "points": 5335,
+      "arrows": 7,
+      "start": {
+        "x": 1,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.7217960237805567,
+        "y": 0.9452119415228601,
+        "index": 5334,
+        "time": 32
+      },
+      "finite": true,
+      "xDomain": [
+        -1.08,
+        1.08
+      ],
+      "yDomain": [
+        -1.4941428571175932,
+        1.4941428571175932
+      ]
+    },
+    {
+      "name": "oscillator/overdamped 相空间轨迹有箭头与起终点",
+      "ok": true,
+      "points": 5335,
+      "arrows": 7,
+      "start": {
+        "x": 1,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.2463347000959132,
+        "y": 0.39060280069122116,
+        "index": 5334,
+        "time": 32
+      },
+      "finite": true,
+      "xDomain": [
+        -1.0873731072796706,
+        1.0873731072796706
+      ],
+      "yDomain": [
+        -0.549791217157083,
+        0.549791217157083
+      ]
+    },
+    {
+      "name": "oscillator/overdamped 相空间坐标轴未坍缩",
+      "ok": true,
+      "points": 5335,
+      "arrows": 7,
+      "start": {
+        "x": 1,
+        "y": 0,
+        "index": 0,
+        "time": 0
+      },
+      "end": {
+        "x": 0.2463347000959132,
+        "y": 0.39060280069122116,
+        "index": 5334,
+        "time": 32
+      },
+      "finite": true,
+      "xDomain": [
+        -1.0873731072796706,
+        1.0873731072796706
+      ],
+      "yDomain": [
+        -0.549791217157083,
+        0.549791217157083
+      ]
+    },
+    {
+      "name": "pendulum 极端参数 min 相空间仍有效",
+      "ok": true,
+      "finite": true,
+      "xDomain": [
+        -0.4478356979736405,
+        0.4478356979736405
+      ],
+      "yDomain": [
+        -2.201949073921488,
+        2.201949073921488
+      ]
+    },
+    {
+      "name": "pendulum 极端参数 max 相空间仍有效",
+      "ok": true,
+      "finite": true,
+      "xDomain": [
+        -8.612371427879737,
+        8.612371427879737
+      ],
+      "yDomain": [
+        -4.382099518534963,
+        4.382099518534963
+      ]
+    },
+    {
+      "name": "oscillator 极端参数 min 相空间仍有效",
+      "ok": true,
+      "finite": true,
+      "xDomain": [
+        -1.08,
+        1.08
+      ],
+      "yDomain": [
+        -0.3852464445904727,
+        0.3852464445904727
+      ]
+    },
+    {
+      "name": "oscillator 极端参数 max 相空间仍有效",
+      "ok": true,
+      "finite": true,
+      "xDomain": [
+        -1.08,
+        1.08
+      ],
+      "yDomain": [
+        -0.7515749109387833,
+        0.7515749109387833
+      ]
+    },
+    {
+      "name": "既有 renderPhasePortrait / renderTriptych / renderPlot 仍可用",
+      "ok": true,
+      "portrait": true,
+      "triptych": true,
+      "plot": true
+    },
+    {
+      "name": "浏览器控制台无错误",
+      "ok": true,
+      "errors": []
+    }
+  ],
+  "status": "PASS",
+  "consoleErrors": []
+}

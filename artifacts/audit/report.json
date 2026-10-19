@@ -1,0 +1,651 @@
+{
+  "generatedAt": "2026-10-19T10:14:50.926Z",
+  "status": "PASS",
+  "consoleErrors": [],
+  "pageErrors": [],
+  "uiAudit": {
+    "status": "PASS",
+    "visual_diff_detected": true,
+    "defects": [],
+    "snapshots": [
+      {
+        "state": "A",
+        "label": "默认值",
+        "trace": "e31730ed",
+        "finite": true,
+        "meanLuminance": 0.0967,
+        "metrics": {
+          "fwhm": 18.00374,
+          "initialFwhm": 18.00374,
+          "broadening": 1,
+          "peak": 0.99973,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 0,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "B",
+        "label": "全局极小",
+        "trace": "a7761642",
+        "finite": true,
+        "meanLuminance": 0.2038,
+        "metrics": {
+          "fwhm": 10.40026,
+          "initialFwhm": 8.00895,
+          "broadening": 1.29858,
+          "peak": 0.15021,
+          "integratedIntensity": 8.51574,
+          "energy": 8.51574,
+          "effectiveChirp": -1050,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "C",
+        "label": "全局极大",
+        "trace": "088db6a7",
+        "finite": true,
+        "meanLuminance": 0.1571,
+        "metrics": {
+          "fwhm": 94.29952,
+          "initialFwhm": 36.00236,
+          "broadening": 2.61926,
+          "peak": 0.41393,
+          "integratedIntensity": 38.32081,
+          "energy": 38.32081,
+          "effectiveChirp": 1050,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "P1",
+        "label": "变换极限",
+        "trace": "e31730ed",
+        "finite": true,
+        "meanLuminance": 0.0967,
+        "metrics": {
+          "fwhm": 18.00374,
+          "initialFwhm": 18.00374,
+          "broadening": 1,
+          "peak": 0.99973,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 0,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "P2",
+        "label": "二阶展宽",
+        "trace": "f144bb26",
+        "finite": true,
+        "meanLuminance": 0.1334,
+        "metrics": {
+          "fwhm": 58.2931,
+          "initialFwhm": 18.00374,
+          "broadening": 3.23783,
+          "peak": 0.30874,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 360,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "P3",
+        "label": "三阶畸变",
+        "trace": "8bbdbaac",
+        "finite": true,
+        "meanLuminance": 0.1118,
+        "metrics": {
+          "fwhm": 34.79564,
+          "initialFwhm": 18.00374,
+          "broadening": 1.93269,
+          "peak": 0.50117,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 220,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "P4",
+        "label": "补偿临界",
+        "trace": "80bd3f22",
+        "finite": true,
+        "meanLuminance": 0.0967,
+        "metrics": {
+          "fwhm": 18.00441,
+          "initialFwhm": 18.00374,
+          "broadening": 1.00004,
+          "peak": 0.9997,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": -1,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "gdd-MIN",
+        "label": "群延迟色散 GDD = min",
+        "trace": "61daa97e",
+        "finite": true,
+        "meanLuminance": 0.1454,
+        "metrics": {
+          "fwhm": 71.09566,
+          "initialFwhm": 18.00374,
+          "broadening": 3.94894,
+          "peak": 0.2528,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": -447,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "gdd-MAX",
+        "label": "群延迟色散 GDD = max",
+        "trace": "f59b73ea",
+        "finite": true,
+        "meanLuminance": 0.2402,
+        "metrics": {
+          "fwhm": 91.36132,
+          "initialFwhm": 18.00374,
+          "broadening": 5.07457,
+          "peak": 0.16727,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 753,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "chirp-MIN",
+        "label": "初始线性啁啾 = min",
+        "trace": "6e150093",
+        "finite": true,
+        "meanLuminance": 0.1453,
+        "metrics": {
+          "fwhm": 71.64641,
+          "initialFwhm": 18.00374,
+          "broadening": 3.97953,
+          "peak": 0.25123,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": -450,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "chirp-MAX",
+        "label": "初始线性啁啾 = max",
+        "trace": "8beb78cb",
+        "finite": true,
+        "meanLuminance": 0.1453,
+        "metrics": {
+          "fwhm": 71.64641,
+          "initialFwhm": 18.00374,
+          "broadening": 3.97953,
+          "peak": 0.25123,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 450,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "tod-MIN",
+        "label": "三阶色散 TOD = min",
+        "trace": "2beca102",
+        "finite": true,
+        "meanLuminance": 0.1038,
+        "metrics": {
+          "fwhm": 23.82807,
+          "initialFwhm": 18.00374,
+          "broadening": 1.32351,
+          "peak": 0.6851,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 153,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "tod-MAX",
+        "label": "三阶色散 TOD = max",
+        "trace": "a2a85d44",
+        "finite": true,
+        "meanLuminance": 0.1039,
+        "metrics": {
+          "fwhm": 23.82807,
+          "initialFwhm": 18.00374,
+          "broadening": 1.32351,
+          "peak": 0.6851,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 153,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "pulseWidth-MIN",
+        "label": "初始脉冲宽度 = min",
+        "trace": "f1d89435",
+        "finite": true,
+        "meanLuminance": 0.1291,
+        "metrics": {
+          "fwhm": 53.62655,
+          "initialFwhm": 8.00895,
+          "broadening": 6.69582,
+          "peak": 0.14918,
+          "integratedIntensity": 8.51574,
+          "energy": 8.51574,
+          "effectiveChirp": 153,
+          "spectralWidth": 2.83889
+        }
+      },
+      {
+        "state": "pulseWidth-MAX",
+        "label": "初始脉冲宽度 = max",
+        "trace": "7c7e87bd",
+        "finite": true,
+        "meanLuminance": 0.1129,
+        "metrics": {
+          "fwhm": 37.88246,
+          "initialFwhm": 36.00236,
+          "broadening": 1.05222,
+          "peak": 0.95031,
+          "integratedIntensity": 38.32081,
+          "energy": 38.32081,
+          "effectiveChirp": 153,
+          "spectralWidth": 2.83889
+        }
+      }
+    ],
+    "pixelDiff": [
+      {
+        "id": "B",
+        "mse": 0.11674644742160231
+      },
+      {
+        "id": "C",
+        "mse": 0.07002403144465347
+      },
+      {
+        "id": "P1",
+        "mse": 0
+      },
+      {
+        "id": "P2",
+        "mse": 0.05248196667103167
+      },
+      {
+        "id": "P3",
+        "mse": 0.037955631040752114
+      },
+      {
+        "id": "P4",
+        "mse": 0.0000032609604927944026
+      }
+    ],
+    "controlsTested": 4,
+    "cartesianBoundaryCombinations": 16
+  },
+  "dynamicFixture": {
+    "pass": true,
+    "beforeTrace": "6f9cc172",
+    "afterTrace": "35bb62e3",
+    "secondaryMse": 0.0002595104447007561,
+    "primaryMse": 0.03159489190548014,
+    "beforeFinite": true,
+    "afterFinite": true,
+    "beforeSecondaryBox": {
+      "width": 699,
+      "height": 235,
+      "clientWidth": 699,
+      "clientHeight": 235,
+      "display": "block"
+    },
+    "afterSecondaryBox": {
+      "width": 699,
+      "height": 235,
+      "clientWidth": 699,
+      "clientHeight": 235,
+      "display": "block"
+    }
+  },
+  "dynamicExport": {
+    "pass": true,
+    "beforeTrace": "43b4d057",
+    "afterTrace": "6f9cc172",
+    "errors": []
+  },
+  "domains": [
+    {
+      "domainId": "pulse",
+      "status": "PASS",
+      "finite": true,
+      "visualDiff": true,
+      "initialPresetMatches": true,
+      "minDefaultMse": 0.11674644742160231,
+      "defaultMaxMse": 0.07002403144465347,
+      "minMaxMse": 0.10345688693979327,
+      "controlsTested": 4,
+      "testedScreenshots": 7,
+      "initialParams": {
+        "gdd": 0,
+        "chirp": 0,
+        "tod": 0,
+        "pulseWidth": 18
+      },
+      "initialPreset": "transform-limited",
+      "metrics": [
+        {
+          "fwhm": 18.00374,
+          "initialFwhm": 18.00374,
+          "broadening": 1,
+          "peak": 0.99973,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 0,
+          "spectralWidth": 2.83889
+        },
+        {
+          "fwhm": 10.40026,
+          "initialFwhm": 8.00895,
+          "broadening": 1.29858,
+          "peak": 0.15021,
+          "integratedIntensity": 8.51574,
+          "energy": 8.51574,
+          "effectiveChirp": -1050,
+          "spectralWidth": 2.83889
+        },
+        {
+          "fwhm": 94.29952,
+          "initialFwhm": 36.00236,
+          "broadening": 2.61926,
+          "peak": 0.41393,
+          "integratedIntensity": 38.32081,
+          "energy": 38.32081,
+          "effectiveChirp": 1050,
+          "spectralWidth": 2.83889
+        },
+        {
+          "fwhm": 18.00374,
+          "initialFwhm": 18.00374,
+          "broadening": 1,
+          "peak": 0.99973,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 0,
+          "spectralWidth": 2.83889
+        },
+        {
+          "fwhm": 58.2931,
+          "initialFwhm": 18.00374,
+          "broadening": 3.23783,
+          "peak": 0.30874,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 360,
+          "spectralWidth": 2.83889
+        },
+        {
+          "fwhm": 34.79564,
+          "initialFwhm": 18.00374,
+          "broadening": 1.93269,
+          "peak": 0.50117,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": 220,
+          "spectralWidth": 2.83889
+        },
+        {
+          "fwhm": 18.00441,
+          "initialFwhm": 18.00374,
+          "broadening": 1.00004,
+          "peak": 0.9997,
+          "integratedIntensity": 19.16041,
+          "energy": 19.16041,
+          "effectiveChirp": -1,
+          "spectralWidth": 2.83889
+        }
+      ]
+    },
+    {
+      "domainId": "oscillator",
+      "status": "PASS",
+      "finite": true,
+      "visualDiff": true,
+      "initialPresetMatches": true,
+      "minDefaultMse": 0.0419229491052316,
+      "defaultMaxMse": 0.015005144316147849,
+      "minMaxMse": 0.041459036014605544,
+      "controlsTested": 4,
+      "testedScreenshots": 6,
+      "initialParams": {
+        "omega0": 1.15,
+        "damping": 0.18,
+        "driveFreq": 0.42,
+        "driveAmp": 0.1
+      },
+      "initialPreset": "free",
+      "metrics": [
+        {
+          "qualityFactor": 3.19444,
+          "naturalPeriod": 5.46364,
+          "dampingRatio": 0.18,
+          "steadyAmplitude": 0.08472,
+          "resonantRatio": 0.36522,
+          "peakDisplacement": 1
+        },
+        {
+          "qualityFactor": 12.5,
+          "naturalPeriod": 12.56637,
+          "dampingRatio": 0.02,
+          "steadyAmplitude": 0.73959,
+          "resonantRatio": 0.7,
+          "peakDisplacement": 1
+        },
+        {
+          "qualityFactor": 1,
+          "naturalPeriod": 2.61799,
+          "dampingRatio": 1.2,
+          "steadyAmplitude": 0.07379,
+          "resonantRatio": 1.16667,
+          "peakDisplacement": 1
+        },
+        {
+          "qualityFactor": 3.19444,
+          "naturalPeriod": 5.46364,
+          "dampingRatio": 0.18,
+          "steadyAmplitude": 0.08472,
+          "resonantRatio": 0.36522,
+          "peakDisplacement": 1
+        },
+        {
+          "qualityFactor": 4.375,
+          "naturalPeriod": 4.48799,
+          "dampingRatio": 0.16,
+          "steadyAmplitude": 0.9883,
+          "resonantRatio": 1,
+          "peakDisplacement": 1
+        },
+        {
+          "qualityFactor": 0.4,
+          "naturalPeriod": 7.85398,
+          "dampingRatio": 1,
+          "steadyAmplitude": 0.54687,
+          "resonantRatio": 1,
+          "peakDisplacement": 1.00683
+        }
+      ]
+    },
+    {
+      "domainId": "cnn",
+      "status": "PASS",
+      "finite": true,
+      "visualDiff": true,
+      "initialPresetMatches": true,
+      "minDefaultMse": 0.012297021630170284,
+      "defaultMaxMse": 0.005975207168840695,
+      "minMaxMse": 0.02119046216374987,
+      "controlsTested": 4,
+      "testedScreenshots": 6,
+      "initialParams": {
+        "kernelSize": 3,
+        "sigma": 0.55,
+        "gain": 1.25,
+        "stride": 1
+      },
+      "initialPreset": "edge",
+      "metrics": [
+        {
+          "receptiveField": 3,
+          "outputSize": 48,
+          "activationFraction": 0.53212,
+          "maxActivation": 1.25,
+          "parameterCount": 9,
+          "effectiveSigma": 0.55
+        },
+        {
+          "receptiveField": 3,
+          "outputSize": 48,
+          "activationFraction": 0.01693,
+          "maxActivation": 0.1,
+          "parameterCount": 9,
+          "effectiveSigma": 0.35
+        },
+        {
+          "receptiveField": 9,
+          "outputSize": 24,
+          "activationFraction": 0.64757,
+          "maxActivation": 1.8,
+          "parameterCount": 81,
+          "effectiveSigma": 2.2
+        },
+        {
+          "receptiveField": 3,
+          "outputSize": 48,
+          "activationFraction": 0.53212,
+          "maxActivation": 1.25,
+          "parameterCount": 9,
+          "effectiveSigma": 0.55
+        },
+        {
+          "receptiveField": 9,
+          "outputSize": 24,
+          "activationFraction": 0.55208,
+          "maxActivation": 1.1,
+          "parameterCount": 81,
+          "effectiveSigma": 1.55
+        },
+        {
+          "receptiveField": 7,
+          "outputSize": 48,
+          "activationFraction": 0.5013,
+          "maxActivation": 0.8,
+          "parameterCount": 49,
+          "effectiveSigma": 2.1
+        }
+      ]
+    },
+    {
+      "domainId": "pendulum",
+      "status": "PASS",
+      "finite": true,
+      "visualDiff": true,
+      "initialPresetMatches": true,
+      "minDefaultMse": 0.03856534232395814,
+      "defaultMaxMse": 0.029642975412387102,
+      "minMaxMse": 0.06438384830855332,
+      "controlsTested": 4,
+      "testedScreenshots": 6,
+      "initialParams": {
+        "length": 1.2,
+        "theta0": 0.16,
+        "damping": 0.02,
+        "initialVelocity": 0
+      },
+      "initialPreset": "small-angle",
+      "metrics": [
+        {
+          "estimatedPeriod": 2.20057,
+          "linearPeriod": 2.19754,
+          "periodError": 0.00138,
+          "maxTheta": 0.16,
+          "maxAngularVelocity": 0.45448,
+          "energy": 0.10442
+        },
+        {
+          "estimatedPeriod": 1.28246,
+          "linearPeriod": 1.26875,
+          "periodError": 0.01081,
+          "maxTheta": 0.41466,
+          "maxAngularVelocity": 2.03884,
+          "energy": 2.07844
+        },
+        {
+          "estimatedPeriod": 3.47461,
+          "linearPeriod": 3.47461,
+          "periodError": 0,
+          "maxTheta": 7.97442,
+          "maxAngularVelocity": 3.22453,
+          "energy": 8.07203
+        },
+        {
+          "estimatedPeriod": 2.20057,
+          "linearPeriod": 2.19754,
+          "periodError": 0.00138,
+          "maxTheta": 0.16,
+          "maxAngularVelocity": 0.45448,
+          "energy": 0.10442
+        },
+        {
+          "estimatedPeriod": 2.9776,
+          "linearPeriod": 2.19754,
+          "periodError": 0.35497,
+          "maxTheta": 2.2,
+          "maxAngularVelocity": 5.08013,
+          "energy": 12.986
+        },
+        {
+          "estimatedPeriod": 1.826,
+          "linearPeriod": 1.79428,
+          "periodError": 0.01768,
+          "maxTheta": 0.56061,
+          "maxAngularVelocity": 1.93096,
+          "energy": 1.87924
+        }
+      ]
+    }
+  ],
+  "exportedPages": [
+    {
+      "domainId": "pulse",
+      "finite": true,
+      "interactive": true,
+      "errors": []
+    },
+    {
+      "domainId": "oscillator",
+      "finite": true,
+      "interactive": true,
+      "errors": []
+    },
+    {
+      "domainId": "cnn",
+      "finite": true,
+      "interactive": true,
+      "errors": []
+    },
+    {
+      "domainId": "pendulum",
+      "finite": true,
+      "interactive": true,
+      "errors": []
+    }
+  ]
+}

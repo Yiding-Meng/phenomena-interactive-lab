@@ -1,0 +1,59 @@
+{
+  "id": "cnn",
+  "concept_title": "卷积感受野",
+  "pedagogical_goal": "在输入、卷积核与激活特征图的三视图联动中建立局部感受野直觉。",
+  "mathematical_model": {
+    "governing_equations_latex": [
+      "F(x,y)=\\sum_{i,j}K(i,j)I(x+i,y+j)",
+      "A(x,y)=\\max(0,g\\cdot F(x,y))"
+    ],
+    "numerical_algorithm": "生成合成图案，按卷积核尺寸与高斯宽度做二维卷积，再执行 ReLU。",
+    "pre_injected_helpers_needed": ["linspace", "finiteStats"]
+  },
+  "interactive_controls": [
+    {
+      "id": "kernelSize",
+      "label": "卷积核尺寸",
+      "symbol": "k",
+      "unit": "px",
+      "min": 3,
+      "max": 9,
+      "step": 2,
+      "default": 5,
+      "physical_effect": "核越大，单个输出像素看到的邻域越大。"
+    },
+    {
+      "id": "sigma",
+      "label": "高斯核宽度",
+      "symbol": "sigma",
+      "unit": "px",
+      "min": 0.35,
+      "max": 2.2,
+      "step": 0.05,
+      "default": 0.85,
+      "physical_effect": "增大 sigma 会把输出从边缘增强推向低频平滑。"
+    }
+  ],
+  "aha_presets": [
+    {
+      "id": "edge",
+      "name": "边缘响应",
+      "description": "小核小 sigma，保留局部纹理。",
+      "param_values": { "kernelSize": 3, "sigma": 0.55 }
+    }
+  ],
+  "visual_views": [
+    {
+      "view_id": "main_canvas",
+      "type": "Grid_Heatmap",
+      "x_axis": "图像列",
+      "y_axis": "图像行",
+      "layers": ["输入", "卷积核", "激活特征图"]
+    }
+  ],
+  "kernel_notes": {
+    "numeric_kernel": "2d-convolution-relu",
+    "reuse_reason": "适合感受野、滤波、卷积与局部算子问题。",
+    "limits": "GPT Planner 要复用真实卷积内核，而不是用表达式画正弦。"
+  }
+}

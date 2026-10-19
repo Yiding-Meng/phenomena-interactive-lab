@@ -1,0 +1,59 @@
+{
+  "id": "pendulum",
+  "concept_title": "非线性单摆",
+  "pedagogical_goal": "把真实 sin(theta) 动力学与线性近似放在一起，看见大摆角时周期如何偏离。",
+  "mathematical_model": {
+    "governing_equations_latex": [
+      "\\ddot{\\theta}+b\\dot{\\theta}+\\frac{g}{L}\\sin\\theta=0",
+      "T_0=2\\pi\\sqrt{L/g}"
+    ],
+    "numerical_algorithm": "RK4 积分非线性单摆，以小角度解析解作为基线。",
+    "pre_injected_helpers_needed": ["rk4", "linspace", "finiteStats"]
+  },
+  "interactive_controls": [
+    {
+      "id": "length",
+      "label": "摆长",
+      "symbol": "L",
+      "unit": "m",
+      "min": 0.4,
+      "max": 3,
+      "step": 0.05,
+      "default": 1.2,
+      "physical_effect": "增大摆长会降低自然频率。"
+    },
+    {
+      "id": "theta0",
+      "label": "初始摆角",
+      "symbol": "theta0",
+      "unit": "rad",
+      "min": 0.08,
+      "max": 2.6,
+      "step": 0.01,
+      "default": 1.05,
+      "physical_effect": "摆角越大，sin theta 的非线性越明显。"
+    }
+  ],
+  "aha_presets": [
+    {
+      "id": "large-angle",
+      "name": "大角度偏离",
+      "description": "振幅增大，真实周期明显长于线性近似。",
+      "param_values": { "length": 1.2, "theta0": 2.2 }
+    }
+  ],
+  "visual_views": [
+    {
+      "view_id": "main_canvas",
+      "type": "Dual_Plot",
+      "x_axis": "时间与摆角",
+      "y_axis": "角度与角速度",
+      "layers": ["小角度基线", "真实角度轨迹", "相空间轨迹"]
+    }
+  ],
+  "kernel_notes": {
+    "numeric_kernel": "rk4-nonlinear-pendulum",
+    "reuse_reason": "适合非线性振动、周期偏移和相空间问题。",
+    "limits": "动态 Planner 对未知模型应明确标注不确定状态。"
+  }
+}
