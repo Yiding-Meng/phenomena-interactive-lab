@@ -157,9 +157,9 @@
   }
 
   async function loadGenerationStatus() {
-    if (window.location.protocol === "file:") {
+    if (!hasDynamicBackend()) {
       elements.generationStatusText.textContent =
-        "本地离线模式 · 内置模型可直接使用；动态生成请运行 npm start";
+        "静态托管模式 · 内置模型可直接使用；动态生成请运行 npm start";
       elements.generationStatus.classList.add("is-ready");
       return;
     }
@@ -213,11 +213,11 @@
   }
 
   async function generateDynamicInstrument(text) {
-    if (window.location.protocol === "file:") {
+    if (!hasDynamicBackend()) {
       elements.conceptHint.textContent =
-        "当前是直接打开的单文件模式。动态生成需要运行 npm start 启动本地服务。";
+        "当前是静态托管模式。动态生成需要运行 npm start 启动带 API 的本地服务。";
       elements.conceptHint.classList.add("is-warning");
-      setGenerationStatus("离线模式 · 动态 Planner 未连接", "is-error");
+      setGenerationStatus("静态托管 · 动态 Planner 未连接", "is-error");
       return;
     }
     const submit = elements.conceptForm.querySelector("[type='submit']");
@@ -267,6 +267,18 @@
       submit.disabled = false;
       submit.innerHTML = originalLabel;
     }
+  }
+
+  function hasDynamicBackend() {
+    const { protocol, hostname } = window.location;
+    return (
+      protocol === "http:" ||
+      protocol === "https:"
+    ) && (
+      hostname === "127.0.0.1" ||
+      hostname === "localhost" ||
+      hostname === "::1"
+    );
   }
 
   async function registerGeneratedBlueprint(blueprint, meta = {}) {
