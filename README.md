@@ -177,3 +177,5 @@ npm run package:clean
 ## GitHub
 
 仓库：<https://github.com/Yiding-Meng/phenomena-interactive-lab>
+
+在线浏览（GitHub Pages）：<https://yiding-meng.github.io/phenomena-interactive-lab/>
